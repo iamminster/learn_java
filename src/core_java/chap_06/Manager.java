@@ -1,4 +1,4 @@
-package core_java.chap_04;
+package core_java.chap_06;
 
 public class Manager extends Employee {
 
