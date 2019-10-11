@@ -1,11 +1,11 @@
 package core_java.chap_08;
 
 import java.io.IOException;
-import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Comparator;
+import java.util.Optional;
 import java.util.Properties;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
@@ -26,7 +26,7 @@ public class Main {
 		// split return a String[] array
 		Stream<String> words = Stream.of(contents.split("\\PL+"));
 		
-		Supplier<Stream<String>> supplier = () -> Stream.of("lady", "imagine", "lady", "words", "imagine", "November");
+		Supplier<Stream<String>> supplier = () -> Stream.of("lady", "imagine", "lady", "words", "imagine", "November", "Angle");
 		
 		Stream<String> song = supplier.get();
 		
@@ -40,8 +40,10 @@ public class Main {
 		
 //		sortedReverse.forEach(s -> System.out.println(s));
 		
-		Object[] powers = Stream.iterate(1, p -> p * 2).peek(e -> System.out.println("peek: " + e)).limit(10).toArray();
+//		Object[] powers = Stream.iterate(1, p -> p * 2).peek(e -> System.out.println("peek: " + e)).limit(10).toArray();
 		
+		Optional<String> largest = song.min(String::compareToIgnoreCase);
+		System.out.println(largest.orElse("empty"));
 //		Predicate<String> checkLength = w -> {
 //			System.out.println(w);
 //			return w.length() >= 4;
