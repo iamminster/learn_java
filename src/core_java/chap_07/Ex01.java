@@ -1,6 +1,11 @@
 package core_java.chap_07;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.BitSet;
 import java.util.HashSet;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -41,20 +46,54 @@ public class Ex01 {
 		return primes;
 	}
 
-	public static Set<Integer> findPrimesBitSet(int n) {
+	public static List<Integer> findPrimesBitSet(int n) {
+		if (n < 2) {
+			throw new IllegalArgumentException("n must equals or larger than 2");
+		}
+		BitSet primes = new BitSet(n);
+		for (int i = 2; i <= n; ++i) {
+			primes.set(i);
+		}
 		
-		return null;
+		for (int i = 2; i <= Math.sqrt((double) n); ++i) {
+			if (primes.get(i)) {
+				for (int j = i * i; j <= n; j += i) {
+					primes.clear(j);
+				}
+			}
+		}
+		List<Integer> result = new ArrayList<>(primes.cardinality());
+		int index = primes.nextSetBit(0);
+		while (index >= 0) {
+			result.add(index);
+			index = primes.nextSetBit(index + 1);
+		}
+		
+		return result;
 	}
 	
 	public static void main(String[] args) {
+		List<String> strLs = new ArrayList<>();
+		strLs.add("hello");
+		strLs.add("my");
+		strLs.add("name");
+		strLs.add("is");
+		strLs.add("Minh");
+//		ListIterator<String> iter = strLs.listIterator();
+//		while (iter.hasNext()) {
+//			iter.set(iter.next().toUpperCase());
+//		}
 		
-		Set<Integer> sortedNums = new TreeSet<>();
+//		for (int i = 0; i < strLs.size(); ++i) {
+//			strLs.set(i, strLs.get(i).toUpperCase());
+//		}
 		
-		Set<Integer> primes = findPrimes(100);
-
-		for (int i : primes) {
-			System.out.println(i);
+		strLs.replaceAll(String::toUpperCase);
+		
+		for (String str : strLs) {
+			System.out.println(str);
 		}
+		
 	}
 
 }
