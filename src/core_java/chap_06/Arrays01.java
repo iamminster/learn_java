@@ -12,6 +12,17 @@ public class Arrays01 {
 
 	public Arrays01() {
 	}
+	
+	private static <T> void swapHelper(List<T> elements, int i, int j) {
+		T temp = elements.get(i);
+		elements.set(i, elements.get(j));
+		elements.set(j, temp);
+	}
+	
+	public static <T> void maxMin(List<T> elements, Comparator<? super T> comp, List<T> result) {
+		minMax(elements, comp, result);
+		Arrays01.swapHelper(result, 0, 1);
+	}
 
 	public static <T> void minMax(List<T> elems, Comparator<? super T> comp, List<? super T> results) {
 		T min = Collections.min(elems, comp);
