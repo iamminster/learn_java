@@ -1,0 +1,274 @@
+Usage: javap <options> <classes>
+use --help for a list of possible options
+Classfile /Users/minhnguyen/Desktop/git/learn_java/out/production/learn_java/core_java/dummy/BinarySearch.class
+  Last modified Nov 20, 2020; size 1750 bytes
+  MD5 checksum c5cf977050f936073a89bbe9450a2964
+  Compiled from "BinarySearch.java"
+public class core_java.dummy.BinarySearch
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #13                         // core_java/dummy/BinarySearch
+  super_class: #14                        // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 1
+Constant pool:
+   #1 = Methodref          #14.#50        // java/lang/Object."<init>":()V
+   #2 = InterfaceMethodref #51.#52        // java/util/List.size:()I
+   #3 = InterfaceMethodref #51.#53        // java/util/List.get:(I)Ljava/lang/Object;
+   #4 = Class              #54            // java/lang/Comparable
+   #5 = InterfaceMethodref #4.#55         // java/lang/Comparable.compareTo:(Ljava/lang/Object;)I
+   #6 = Class              #56            // java/lang/Integer
+   #7 = Methodref          #6.#57         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   #8 = Methodref          #58.#59        // java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+   #9 = Fieldref           #60.#61        // java/lang/System.out:Ljava/io/PrintStream;
+  #10 = Methodref          #13.#62        // core_java/dummy/BinarySearch.binarySearch:(Ljava/util/List;Ljava/lang/Object;)I
+  #11 = Methodref          #63.#64        // java/io/PrintStream.println:(I)V
+  #12 = Methodref          #65.#62        // java/util/Collections.binarySearch:(Ljava/util/List;Ljava/lang/Object;)I
+  #13 = Class              #66            // core_java/dummy/BinarySearch
+  #14 = Class              #67            // java/lang/Object
+  #15 = Utf8               <init>
+  #16 = Utf8               ()V
+  #17 = Utf8               Code
+  #18 = Utf8               LineNumberTable
+  #19 = Utf8               LocalVariableTable
+  #20 = Utf8               this
+  #21 = Utf8               Lcore_java/dummy/BinarySearch;
+  #22 = Utf8               binarySearch
+  #23 = Utf8               (Ljava/util/List;Ljava/lang/Object;)I
+  #24 = Utf8               mid
+  #25 = Utf8               I
+  #26 = Utf8               midVal
+  #27 = Utf8               Ljava/lang/Comparable;
+  #28 = Utf8               cmp
+  #29 = Utf8               list
+  #30 = Utf8               Ljava/util/List;
+  #31 = Utf8               key
+  #32 = Utf8               Ljava/lang/Object;
+  #33 = Utf8               low
+  #34 = Utf8               high
+  #35 = Utf8               LocalVariableTypeTable
+  #36 = Utf8               Ljava/lang/Comparable<-TT;>;
+  #37 = Utf8               Ljava/util/List<+Ljava/lang/Comparable<-TT;>;>;
+  #38 = Utf8               TT;
+  #39 = Utf8               StackMapTable
+  #40 = Utf8               Signature
+  #41 = Utf8               <T:Ljava/lang/Object;>(Ljava/util/List<+Ljava/lang/Comparable<-TT;>;>;TT;)I
+  #42 = Utf8               main
+  #43 = Utf8               ([Ljava/lang/String;)V
+  #44 = Utf8               args
+  #45 = Utf8               [Ljava/lang/String;
+  #46 = Utf8               ls
+  #47 = Utf8               Ljava/util/List<Ljava/lang/Integer;>;
+  #48 = Utf8               SourceFile
+  #49 = Utf8               BinarySearch.java
+  #50 = NameAndType        #15:#16        // "<init>":()V
+  #51 = Class              #68            // java/util/List
+  #52 = NameAndType        #69:#70        // size:()I
+  #53 = NameAndType        #71:#72        // get:(I)Ljava/lang/Object;
+  #54 = Utf8               java/lang/Comparable
+  #55 = NameAndType        #73:#74        // compareTo:(Ljava/lang/Object;)I
+  #56 = Utf8               java/lang/Integer
+  #57 = NameAndType        #75:#76        // valueOf:(I)Ljava/lang/Integer;
+  #58 = Class              #77            // java/util/Arrays
+  #59 = NameAndType        #78:#79        // asList:([Ljava/lang/Object;)Ljava/util/List;
+  #60 = Class              #80            // java/lang/System
+  #61 = NameAndType        #81:#82        // out:Ljava/io/PrintStream;
+  #62 = NameAndType        #22:#23        // binarySearch:(Ljava/util/List;Ljava/lang/Object;)I
+  #63 = Class              #83            // java/io/PrintStream
+  #64 = NameAndType        #84:#85        // println:(I)V
+  #65 = Class              #86            // java/util/Collections
+  #66 = Utf8               core_java/dummy/BinarySearch
+  #67 = Utf8               java/lang/Object
+  #68 = Utf8               java/util/List
+  #69 = Utf8               size
+  #70 = Utf8               ()I
+  #71 = Utf8               get
+  #72 = Utf8               (I)Ljava/lang/Object;
+  #73 = Utf8               compareTo
+  #74 = Utf8               (Ljava/lang/Object;)I
+  #75 = Utf8               valueOf
+  #76 = Utf8               (I)Ljava/lang/Integer;
+  #77 = Utf8               java/util/Arrays
+  #78 = Utf8               asList
+  #79 = Utf8               ([Ljava/lang/Object;)Ljava/util/List;
+  #80 = Utf8               java/lang/System
+  #81 = Utf8               out
+  #82 = Utf8               Ljava/io/PrintStream;
+  #83 = Utf8               java/io/PrintStream
+  #84 = Utf8               println
+  #85 = Utf8               (I)V
+  #86 = Utf8               java/util/Collections
+{
+  public core_java.dummy.BinarySearch();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 7: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcore_java/dummy/BinarySearch;
+
+  public static <T extends java.lang.Object> int binarySearch(java.util.List<? extends java.lang.Comparable<? super T>>, T);
+    descriptor: (Ljava/util/List;Ljava/lang/Object;)I
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=7, args_size=2
+         0: iconst_0
+         1: istore_2
+         2: aload_0
+         3: invokeinterface #2,  1            // InterfaceMethod java/util/List.size:()I
+         8: iconst_1
+         9: isub
+        10: istore_3
+        11: iload_2
+        12: iload_3
+        13: if_icmpgt     78
+        16: iload_3
+        17: iload_2
+        18: iadd
+        19: iconst_1
+        20: iushr
+        21: istore        4
+        23: aload_0
+        24: iload         4
+        26: invokeinterface #3,  2            // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+        31: checkcast     #4                  // class java/lang/Comparable
+        34: astore        5
+        36: aload         5
+        38: aload_1
+        39: invokeinterface #5,  2            // InterfaceMethod java/lang/Comparable.compareTo:(Ljava/lang/Object;)I
+        44: istore        6
+        46: iload         6
+        48: ifge          59
+        51: iload         4
+        53: iconst_1
+        54: iadd
+        55: istore_2
+        56: goto          75
+        59: iload         6
+        61: ifle          72
+        64: iload         4
+        66: iconst_1
+        67: isub
+        68: istore_3
+        69: goto          75
+        72: iload         4
+        74: ireturn
+        75: goto          11
+        78: iload_2
+        79: iconst_1
+        80: iadd
+        81: ineg
+        82: ireturn
+      LineNumberTable:
+        line 10: 0
+        line 11: 2
+        line 13: 11
+        line 14: 16
+        line 15: 23
+        line 16: 36
+        line 18: 46
+        line 19: 51
+        line 20: 59
+        line 21: 64
+        line 23: 72
+        line 24: 75
+        line 26: 78
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           23      52     4   mid   I
+           36      39     5 midVal   Ljava/lang/Comparable;
+           46      29     6   cmp   I
+            0      83     0  list   Ljava/util/List;
+            0      83     1   key   Ljava/lang/Object;
+            2      81     2   low   I
+           11      72     3  high   I
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           36      39     5 midVal   Ljava/lang/Comparable<-TT;>;
+            0      83     0  list   Ljava/util/List<+Ljava/lang/Comparable<-TT;>;>;
+            0      83     1   key   TT;
+      StackMapTable: number_of_entries = 5
+        frame_type = 253 /* append */
+          offset_delta = 11
+          locals = [ int, int ]
+        frame_type = 254 /* append */
+          offset_delta = 47
+          locals = [ int, class java/lang/Comparable, int ]
+        frame_type = 12 /* same */
+        frame_type = 248 /* chop */
+          offset_delta = 2
+        frame_type = 2 /* same */
+    Signature: #41                          // <T:Ljava/lang/Object;>(Ljava/util/List<+Ljava/lang/Comparable<-TT;>;>;TT;)I
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=1
+         0: bipush        6
+         2: anewarray     #6                  // class java/lang/Integer
+         5: dup
+         6: iconst_0
+         7: iconst_5
+         8: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        11: aastore
+        12: dup
+        13: iconst_1
+        14: bipush        10
+        16: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        19: aastore
+        20: dup
+        21: iconst_2
+        22: bipush        15
+        24: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        27: aastore
+        28: dup
+        29: iconst_3
+        30: bipush        20
+        32: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        35: aastore
+        36: dup
+        37: iconst_4
+        38: bipush        25
+        40: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        43: aastore
+        44: dup
+        45: iconst_5
+        46: bipush        30
+        48: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        51: aastore
+        52: invokestatic  #8                  // Method java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+        55: astore_1
+        56: getstatic     #9                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        59: aload_1
+        60: bipush        22
+        62: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        65: invokestatic  #10                 // Method binarySearch:(Ljava/util/List;Ljava/lang/Object;)I
+        68: invokevirtual #11                 // Method java/io/PrintStream.println:(I)V
+        71: getstatic     #9                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        74: aload_1
+        75: bipush        22
+        77: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        80: invokestatic  #12                 // Method java/util/Collections.binarySearch:(Ljava/util/List;Ljava/lang/Object;)I
+        83: invokevirtual #11                 // Method java/io/PrintStream.println:(I)V
+        86: return
+      LineNumberTable:
+        line 30: 0
+        line 31: 56
+        line 32: 71
+        line 33: 86
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      87     0  args   [Ljava/lang/String;
+           56      31     1    ls   Ljava/util/List;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           56      31     1    ls   Ljava/util/List<Ljava/lang/Integer;>;
+}
+SourceFile: "BinarySearch.java"

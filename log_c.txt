@@ -1,0 +1,108 @@
+Compiled from "BinarySearch.java"
+public class core_java.dummy.BinarySearch {
+  public core_java.dummy.BinarySearch();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static <T> int binarySearch(java.util.List<? extends java.lang.Comparable<? super T>>, T);
+    Code:
+       0: iconst_0
+       1: istore_2
+       2: aload_0
+       3: invokeinterface #2,  1            // InterfaceMethod java/util/List.size:()I
+       8: iconst_1
+       9: isub
+      10: istore_3
+      11: iload_2
+      12: iload_3
+      13: if_icmpgt     78
+      16: iload_3
+      17: iload_2
+      18: iadd
+      19: iconst_1
+      20: iushr
+      21: istore        4
+      23: aload_0
+      24: iload         4
+      26: invokeinterface #3,  2            // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      31: checkcast     #4                  // class java/lang/Comparable
+      34: astore        5
+      36: aload         5
+      38: aload_1
+      39: invokeinterface #5,  2            // InterfaceMethod java/lang/Comparable.compareTo:(Ljava/lang/Object;)I
+      44: istore        6
+      46: iload         6
+      48: ifge          59
+      51: iload         4
+      53: iconst_1
+      54: iadd
+      55: istore_2
+      56: goto          75
+      59: iload         6
+      61: ifle          72
+      64: iload         4
+      66: iconst_1
+      67: isub
+      68: istore_3
+      69: goto          75
+      72: iload         4
+      74: ireturn
+      75: goto          11
+      78: iload_2
+      79: iconst_1
+      80: iadd
+      81: ineg
+      82: ireturn
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: bipush        6
+       2: anewarray     #6                  // class java/lang/Integer
+       5: dup
+       6: iconst_0
+       7: iconst_5
+       8: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      11: aastore
+      12: dup
+      13: iconst_1
+      14: bipush        10
+      16: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      19: aastore
+      20: dup
+      21: iconst_2
+      22: bipush        15
+      24: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      27: aastore
+      28: dup
+      29: iconst_3
+      30: bipush        20
+      32: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      35: aastore
+      36: dup
+      37: iconst_4
+      38: bipush        25
+      40: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      43: aastore
+      44: dup
+      45: iconst_5
+      46: bipush        30
+      48: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      51: aastore
+      52: invokestatic  #8                  // Method java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+      55: astore_1
+      56: getstatic     #9                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      59: aload_1
+      60: bipush        22
+      62: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      65: invokestatic  #10                 // Method binarySearch:(Ljava/util/List;Ljava/lang/Object;)I
+      68: invokevirtual #11                 // Method java/io/PrintStream.println:(I)V
+      71: getstatic     #9                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      74: aload_1
+      75: bipush        22
+      77: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      80: invokestatic  #12                 // Method java/util/Collections.binarySearch:(Ljava/util/List;Ljava/lang/Object;)I
+      83: invokevirtual #11                 // Method java/io/PrintStream.println:(I)V
+      86: return
+}

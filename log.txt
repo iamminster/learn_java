@@ -1,0 +1,6 @@
+Compiled from "BinarySearch.java"
+public class core_java.dummy.BinarySearch {
+  public core_java.dummy.BinarySearch();
+  public static <T> int binarySearch(java.util.List<? extends java.lang.Comparable<? super T>>, T);
+  public static void main(java.lang.String[]);
+}

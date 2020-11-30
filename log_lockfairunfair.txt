@@ -1,0 +1,131 @@
+Compiled from "LockFairUnFair.java"
+public class core_java.dummy.LockFairUnFair {
+  public core_java.dummy.LockFairUnFair();
+  public static void main(java.lang.String[]);
+}
+Usage: javap <options> <classes>
+use --help for a list of possible options
+Classfile /Users/minhnguyen/Desktop/git/learn_java/out/production/learn_java/core_java/dummy/LockFairUnFair.class
+  Last modified Nov 21, 2020; size 895 bytes
+  MD5 checksum d57789c072b87051224cdd3aeccacdbf
+  Compiled from "LockFairUnFair.java"
+public class core_java.dummy.LockFairUnFair
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #9                          // core_java/dummy/LockFairUnFair
+  super_class: #10                        // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 3
+Constant pool:
+   #1 = Methodref          #10.#32        // java/lang/Object."<init>":()V
+   #2 = Class              #33            // java/util/concurrent/locks/ReentrantLock
+   #3 = Methodref          #2.#32         // java/util/concurrent/locks/ReentrantLock."<init>":()V
+   #4 = Class              #34            // java/lang/Thread
+   #5 = Class              #35            // core_java/dummy/LockFairUnFair$1
+   #6 = Methodref          #5.#36         // core_java/dummy/LockFairUnFair$1."<init>":(Ljava/util/concurrent/locks/ReentrantLock;I)V
+   #7 = Methodref          #4.#37         // java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+   #8 = Methodref          #4.#38         // java/lang/Thread.start:()V
+   #9 = Class              #39            // core_java/dummy/LockFairUnFair
+  #10 = Class              #40            // java/lang/Object
+  #11 = Utf8               InnerClasses
+  #12 = Utf8               <init>
+  #13 = Utf8               ()V
+  #14 = Utf8               Code
+  #15 = Utf8               LineNumberTable
+  #16 = Utf8               LocalVariableTable
+  #17 = Utf8               this
+  #18 = Utf8               Lcore_java/dummy/LockFairUnFair;
+  #19 = Utf8               main
+  #20 = Utf8               ([Ljava/lang/String;)V
+  #21 = Utf8               finalI
+  #22 = Utf8               I
+  #23 = Utf8               i
+  #24 = Utf8               args
+  #25 = Utf8               [Ljava/lang/String;
+  #26 = Utf8               lock
+  #27 = Utf8               Ljava/util/concurrent/locks/ReentrantLock;
+  #28 = Utf8               StackMapTable
+  #29 = Utf8               SourceFile
+  #30 = Utf8               LockFairUnFair.java
+  #31 = Utf8               NestMembers
+  #32 = NameAndType        #12:#13        // "<init>":()V
+  #33 = Utf8               java/util/concurrent/locks/ReentrantLock
+  #34 = Utf8               java/lang/Thread
+  #35 = Utf8               core_java/dummy/LockFairUnFair$1
+  #36 = NameAndType        #12:#41        // "<init>":(Ljava/util/concurrent/locks/ReentrantLock;I)V
+  #37 = NameAndType        #12:#42        // "<init>":(Ljava/lang/Runnable;)V
+  #38 = NameAndType        #43:#13        // start:()V
+  #39 = Utf8               core_java/dummy/LockFairUnFair
+  #40 = Utf8               java/lang/Object
+  #41 = Utf8               (Ljava/util/concurrent/locks/ReentrantLock;I)V
+  #42 = Utf8               (Ljava/lang/Runnable;)V
+  #43 = Utf8               start
+{
+  public core_java.dummy.LockFairUnFair();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 5: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcore_java/dummy/LockFairUnFair;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=6, locals=4, args_size=1
+         0: new           #2                  // class java/util/concurrent/locks/ReentrantLock
+         3: dup
+         4: invokespecial #3                  // Method java/util/concurrent/locks/ReentrantLock."<init>":()V
+         7: astore_1
+         8: iconst_0
+         9: istore_2
+        10: iload_2
+        11: iconst_5
+        12: if_icmpge     42
+        15: iload_2
+        16: istore_3
+        17: new           #4                  // class java/lang/Thread
+        20: dup
+        21: new           #5                  // class core_java/dummy/LockFairUnFair$1
+        24: dup
+        25: aload_1
+        26: iload_3
+        27: invokespecial #6                  // Method core_java/dummy/LockFairUnFair$1."<init>":(Ljava/util/concurrent/locks/ReentrantLock;I)V
+        30: invokespecial #7                  // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+        33: invokevirtual #8                  // Method java/lang/Thread.start:()V
+        36: iinc          2, 1
+        39: goto          10
+        42: return
+      LineNumberTable:
+        line 7: 0
+        line 9: 8
+        line 10: 15
+        line 11: 17
+        line 20: 33
+        line 9: 36
+        line 22: 42
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           17      19     3 finalI   I
+           10      32     2     i   I
+            0      43     0  args   [Ljava/lang/String;
+            8      35     1  lock   Ljava/util/concurrent/locks/ReentrantLock;
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 10
+          locals = [ class java/util/concurrent/locks/ReentrantLock, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 31
+}
+SourceFile: "LockFairUnFair.java"
+NestMembers:
+  core_java/dummy/LockFairUnFair$1
+InnerClasses:
+  #5;                                     // class core_java/dummy/LockFairUnFair$1
